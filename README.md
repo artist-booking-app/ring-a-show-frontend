@@ -34,7 +34,7 @@ Models:
     - type of location:  --> model
     - space (square meters):
     - performance ready?: boolean
-  - reviews from artists who performed for this user previously (protected; only artists can see this) [array of strings]]
+  - reviews from artists who performed for this user previously (protected; only artists can see this) [array of strings]
 
 - Artist model: - CR
   - artist name: String
@@ -148,20 +148,23 @@ Timeline:
 
 ### Milestone 5
 [ ] Homepage
-    [x] GET request for list of artists
     [ ] Component for a pop-up banner that asks your preference in the beginning 
 [x] Artist page
-    [x] GET request display artist details
+    [x] GET request to display list of artists
+    [x] Added "Add to Favourites" button
+[x] Artist Details Page
+    [x] GET request to display artist details
+[x] Artist Create Page
+    [x] POST request to create new artist    
 [ ] Performance page
-    [ ] GET request to display performance details
+    [x] GET request to display performance details
     [ ] GET request to display artist details (small link/small bit of information)
     [ ] Component to book the specific performance 
-[ ] Edit/delete performance page
-    [ ] PUT and Delete Request
+[x] Edit/delete performance page
+    [x] PUT and Delete Request
 [ ] User page 
     [ ] GET request to display user dtails
-[ ] Favourites page
-    [ ] TBD
+[x] Favourites page
 [ ] Sign up page
     [ ] Creating a form to input information
     [ ] POST Request
