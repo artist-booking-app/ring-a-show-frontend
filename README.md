@@ -148,10 +148,10 @@ Timeline:
 
 ### Milestone 5
 [ ] Homepage
-    [ ] GET request for list of artists
+    [x] GET request for list of artists
     [ ] Component for a pop-up banner that asks your preference in the beginning 
-[ ] Artist page
-    [ ] GET request display artist details
+[x] Artist page
+    [x] GET request display artist details
 [ ] Performance page
     [ ] GET request to display performance details
     [ ] GET request to display artist details (small link/small bit of information)
