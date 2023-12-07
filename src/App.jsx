@@ -16,6 +16,7 @@ import CreatePerformancePage from './pages/CreatePerformancePage'
 import FavouritesPage from './pages/FavouritesPage'
 import axios from 'axios'
 import CreateArtistPage from './pages/CreateArtistPage'
+import Navbar from './components/Navbar'
  
 
 
@@ -54,6 +55,9 @@ function App() {
   
   return (
     <>
+
+    <Navbar />
+    
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/artists" element={<ArtistsPage callback={addToFavourites} />} />

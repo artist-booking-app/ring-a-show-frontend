@@ -165,12 +165,12 @@ Timeline:
 [ ] User page 
     [ ] GET request to display user dtails
 [x] Favourites page
-[ ] Sign up page
-    [ ] Creating a form to input information
-    [ ] POST Request
-[ ] Log in page
-    [ ] Creating a form to input information
-    [ ] POST Request 
+[x] Sign up page
+    [x] Creating a form to input information
+    [x] POST Request
+[x] Log in page
+    [x] Creating a form to input information
+    [x] POST Request 
 
 ### Milestone 6
 [ ] Implement navigational functionalities
