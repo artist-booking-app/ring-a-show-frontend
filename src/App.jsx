@@ -10,6 +10,8 @@ import BookingPage from '../pages/BookingPage'
 import UserPage from '../pages/UserPage'
 import SignupPage from '../pages/SignupPage'
 import LoginPage from '../pages/LoginPage'
+import EditPerformancePage from '../pages/EditPerformancePage'
+import CreatePerformancePage from '../pages/CreatePerformancePage'
  
 
 
@@ -23,7 +25,9 @@ function App() {
       <Route path="/artists" element={<ArtistsPage />} />
       <Route path="/artists/:artistId" element={<ArtistDetailsPage />} />
       <Route path="/performances" element={<PerformancesPage/>} />
+      <Route path="/performances/create" element={<CreatePerformancePage/>} />
       <Route path="/performances/:performanceId" element={<PerformanceDetailsPage/>} />
+      <Route path="/performances/:performanceId/edit" element={<EditPerformancePage/>} />
       <Route path="/booking" element={<BookingPage/>} />
       <Route path="/users/:userId" element={<UserPage/>} />
       <Route path="/signup" element={<SignupPage/>} />
