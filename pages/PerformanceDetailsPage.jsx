@@ -19,6 +19,8 @@ function PerformanceDetailsPage() {
     axios
       .get(`${urlAPI}/api/performances/${performanceId}`)
       .then((response) => {
+        setLoading(false);
+        console.log(response.data)
         setPerformance(response.data);
       })
       .catch((error) => {
@@ -38,10 +40,11 @@ function PerformanceDetailsPage() {
         <div>
           <h2>{performance.title} </h2>
           <p>{performance.description}</p>
-          <p>{performance.requirements} </p>
-          <span>{performance.fee} </span>
+          <p>Minimum requirementes: {performance.requirements} </p>
+          <span>Performance fee: {performance.fee}€</span>
+          <br />
           {performance.typeOfPerformance.map((type) => {
-            return <span>type</span>;
+            return <span>Type of performance: {type}</span>;
           })}
         </div>
       )}

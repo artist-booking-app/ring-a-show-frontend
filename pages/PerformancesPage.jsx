@@ -16,7 +16,8 @@ function PerformancesPage() {
     axios
       .get(`${urlAPI}/api/performances`)
       .then((response) => {
-        setEvents(response.data);
+        setLoading(false)
+        setPerformances(response.data);
       })
       .catch((error) => {
         console.log("Error: " + error);
