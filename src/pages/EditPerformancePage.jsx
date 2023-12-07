@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
-import DeletePerformance from "../src/components/DeletePerformanceButton";
+import DeletePerformance from "../components/DeletePerformanceButton";
 
 
 const urlAPI = import.meta.env.VITE_API_URL;

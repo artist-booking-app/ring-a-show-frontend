@@ -156,12 +156,12 @@ Timeline:
     [x] GET request to display artist details
 [x] Artist Create Page
     [x] POST request to create new artist    
-[ ] Performance page
+[x] Performance page
     [x] GET request to display performance details
-    [ ] GET request to display artist details (small link/small bit of information)
+    [x] GET request to display artist details (small link/small bit of information)
     [ ] Component to book the specific performance 
 [x] Edit/delete performance page
-    [x] PUT and Delete Request
+    [x] PUT and DELETE Request
 [ ] User page 
     [ ] GET request to display user dtails
 [x] Favourites page
