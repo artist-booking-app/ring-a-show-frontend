@@ -1,7 +1,9 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 useState;
+
+
 
 const urlAPI = import.meta.env.VITE_API_URL;
 
@@ -10,9 +12,6 @@ function PerformanceDetailsPage() {
   const [performance, setPerformance] = useState({});
   const { performanceId } = useParams();
 
-  function refreshPage() {
-    window.location.reload(false);
-  }
 
   function getPerformance() {
     setLoading(true);
@@ -20,7 +19,6 @@ function PerformanceDetailsPage() {
       .get(`${urlAPI}/api/performances/${performanceId}`)
       .then((response) => {
         setLoading(false);
-        console.log(response.data)
         setPerformance(response.data);
       })
       .catch((error) => {
@@ -43,9 +41,13 @@ function PerformanceDetailsPage() {
           <p>Minimum requirementes: {performance.requirements} </p>
           <span>Performance fee: {performance.fee}€</span>
           <br />
-          {performance.typeOfPerformance.map((type) => {
-            return <span>Type of performance: {type}</span>;
-          })}
+          {performance.typeOfPerformance.map((type, index) => (
+             <span key={index}>Type of performance: {type}</span>
+          ))}
+
+          <Link to={`/performances/${performance._id}/edit`}>
+            <p>Go to edit page</p>
+          </Link>
         </div>
       )}
     </div>
