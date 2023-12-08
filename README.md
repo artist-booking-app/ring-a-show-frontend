@@ -161,8 +161,10 @@ Timeline:
     [x] GET request to display artist details (small link/small bit of information)
 [x] Edit/delete performance page
     [x] PUT and DELETE Request
-[ ] User page 
-    [ ] GET request to display user dtails
+[x] User page 
+    [x] GET request to display user details
+    [ ] Booking details
+    [ ] Favourites component
 [x] Favourites page
 [x] Sign up page
     [x] Creating a form to input information
@@ -180,8 +182,8 @@ Timeline:
     [x] Create form for address below booking details
 
 ### Milestone 7
-[ ] Implement navigational functionalities
-    [ ] Navbar (include access to homepage, user page, favourites page, sign up and login)
+[x] Implement navigational functionalities
+    [x] Navbar (include access to homepage, user page, favourites page, sign up and login)
     [ ] Footer
 [ ] Styling with CSS
 [ ] Responsive

@@ -8,7 +8,6 @@ function BookingForm({ performanceId, artistId, API_URL }) {
     const [typeOfLocation, setTypeOfLocation] = useState("")
     const [indoor, setIndoor] = useState(true)
     
-  
 
     const bookNowHandler = (e) => {
         e.preventDefault()
