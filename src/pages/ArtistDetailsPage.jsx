@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import BookingForm from "../components/BookingForm";
 
 
 function ArtistDetailsPage() {
@@ -73,6 +74,7 @@ function ArtistDetailsPage() {
               </>
             )}
           </div>
+          <BookingForm artistId={artistId} performanceId={artist.performancesAvailable._id} API_URL={API_URL} />
         </>
       )}
     </>

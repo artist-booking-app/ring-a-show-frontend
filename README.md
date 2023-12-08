@@ -172,13 +172,12 @@ Timeline:
     [x] POST Request
 
 ### Milestone 6
-[ ] Booking component 
-    [ ] Create state variables for both performance and artists
-    [ ] useParams to obtain performanceId and artistId
-    [ ] axios.get to both performanceId and artistId details
-    [ ] Create "book now" handler with a POST request to send booking to database
-    [ ] Add information from the specific performance and artist to booking details
-    [ ] Create form for address below booking details
+[x] Booking component 
+    [x] Create state variables for both performance and artists
+    [x] Object destructuring to obtain performanceId and artistId
+    [x] Create "book now" handler with a POST request to send booking to database
+    [x] Add information from the specific performance and artist to booking details
+    [x] Create form for address below booking details
 
 ### Milestone 7
 [ ] Implement navigational functionalities
