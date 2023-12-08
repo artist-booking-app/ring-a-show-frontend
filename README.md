@@ -159,7 +159,6 @@ Timeline:
 [x] Performance page
     [x] GET request to display performance details
     [x] GET request to display artist details (small link/small bit of information)
-    [ ] Component to book the specific performance 
 [x] Edit/delete performance page
     [x] PUT and DELETE Request
 [ ] User page 
@@ -170,9 +169,18 @@ Timeline:
     [x] POST Request
 [x] Log in page
     [x] Creating a form to input information
-    [x] POST Request 
+    [x] POST Request
 
 ### Milestone 6
+[ ] Booking component 
+    [ ] Create state variables for both performance and artists
+    [ ] useParams to obtain performanceId and artistId
+    [ ] axios.get to both performanceId and artistId details
+    [ ] Create "book now" handler with a POST request to send booking to database
+    [ ] Add information from the specific performance and artist to booking details
+    [ ] Create form for address below booking details
+
+### Milestone 7
 [ ] Implement navigational functionalities
     [ ] Navbar (include access to homepage, user page, favourites page, sign up and login)
     [ ] Footer
