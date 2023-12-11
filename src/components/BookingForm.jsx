@@ -2,7 +2,7 @@ import axios from "axios";
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../context/auth.context";
 
-function BookingForm({ performanceId, artistId, API_URL }) {
+function BookingForm({ performanceId, artistId, API_URL, artistName, performanceName }) {
 
 
     const [address, setAddress] = useState("")
@@ -19,7 +19,9 @@ function BookingForm({ performanceId, artistId, API_URL }) {
 
         const requestBody = {
             artistRef: artistId,
+            artistName: artistName,
             performanceRef: performanceId,
+            performanceName: performanceName,
             userRef: user._id,
             date,
             location: {

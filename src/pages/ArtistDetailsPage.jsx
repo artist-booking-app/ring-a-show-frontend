@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import BookingForm from "../components/BookingForm";
+import PerformancesList from "../components/PerformancesList";
 
 
 function ArtistDetailsPage() {
@@ -11,6 +12,7 @@ function ArtistDetailsPage() {
   const { artistId } = useParams();
 
   const [showForm, setShowForm] = useState(false);
+  const [showBooking, setShowBooking] = useState(false)
 
   const getApiData = () => {
     axios
@@ -68,13 +70,26 @@ function ArtistDetailsPage() {
                     <p>
                       Requirements: {artist.performancesAvailable.requirements}
                     </p>
-                    <button>Book this Performance</button>
+                      <button onClick={() => setShowBooking(!showBooking)}>
+                        {!showBooking ? (
+                          <p>Book Test</p>
+                        ) : (
+                          <p>Hide Form</p>
+                        )}{" "}
+                      </button>
+
+                      {showBooking && (
+                        <BookingForm artistId={artistId} performanceId={artist.performancesAvailable._id} API_URL={API_URL} artistName={artist.artistName} performanceName={artist.performancesAvailable.title} />
+                      )}
+               
+
                   </div>
                 )}
               </>
             )}
           </div>
-          <BookingForm artistId={artistId} performanceId={artist.performancesAvailable._id} API_URL={API_URL} />
+        
+          
         </>
       )}
     </>

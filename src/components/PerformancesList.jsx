@@ -8,6 +8,7 @@ const urlAPI = import.meta.env.VITE_API_URL;
 function PerformancesList() {
   const [loading, setLoading] = useState(true);
   const [performances, setPerformances] = useState([]);
+  const [showForm, setShowForm] = useState(true);
 
   function getAllPerformances() {
     setLoading(true);
@@ -45,6 +46,14 @@ function PerformancesList() {
                 {performance.typeOfPerformance.map((type, index) => (
                   <span key={index}>Type: {type}</span>
                 ))}
+                {/* <button>Book Now</button> */}
+                <button onClick={() => setShowForm(!showForm)}>
+                  {!showForm ? (
+                    <p>Book Test</p>
+                  ) : (
+                    <BookingForm artistId={artistId} performanceId={artist.performancesAvailable._id} API_URL={API_URL} artistName={artist.artistName} performanceName={artist.performancesAvailable.title} />
+                  )}{" "}
+                </button>
               </li>
             );
           })}
