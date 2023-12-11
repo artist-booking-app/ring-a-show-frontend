@@ -23,7 +23,7 @@ function Navbar() {
           </>
         )}
 
-        <Link to="/users/:userId">
+        <Link to={`/users/${user?._id}`}>
           <button>My Profile</button>
         </Link>
    

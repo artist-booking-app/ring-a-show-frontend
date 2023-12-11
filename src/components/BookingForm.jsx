@@ -1,5 +1,6 @@
 import axios from "axios";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { AuthContext } from "../context/auth.context";
 
 function BookingForm({ performanceId, artistId, API_URL }) {
 
@@ -7,7 +8,8 @@ function BookingForm({ performanceId, artistId, API_URL }) {
     const [address, setAddress] = useState("")
     const [typeOfLocation, setTypeOfLocation] = useState("")
     const [indoor, setIndoor] = useState(true)
-    
+    const [date, setDate] = useState("")
+    const {user} = useContext(AuthContext)
 
     const bookNowHandler = (e) => {
         e.preventDefault()
@@ -15,7 +17,8 @@ function BookingForm({ performanceId, artistId, API_URL }) {
         const requestBody = {
             artistRef: artistId,
             performanceRef: performanceId,
-            userRef: "6572f5c9cd236fd155614ea6",
+            userRef: user._id,
+            date,
             location: {
                 address,
                 typeOfLocation,
@@ -29,11 +32,12 @@ function BookingForm({ performanceId, artistId, API_URL }) {
             .then((response) => {
                 console.log(response + "Booking was successful")
                 console.log(response.data)
-                console.log(requestBody)
             })
             .catch((error) => {
                 console.log(error)
             })
+        
+        
     }
 
     return (
@@ -52,6 +56,17 @@ function BookingForm({ performanceId, artistId, API_URL }) {
                         onChange={(e) => setAddress(e.target.value)}
                     />
                 </label>
+
+                <label>
+                    Date:
+                    <input
+                        type="datetime-local"
+                        name="datetime"
+                        required={true}
+                        value={date}
+                        onChange={(e) => setDate(e.target.value)}
+                    />
+                </label>                
 
                 <label>
                     Type of Location:

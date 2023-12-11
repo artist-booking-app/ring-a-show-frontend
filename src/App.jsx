@@ -17,6 +17,7 @@ import FavouritesPage from './pages/FavouritesPage'
 import axios from 'axios'
 import CreateArtistPage from './pages/CreateArtistPage'
 import Navbar from './components/Navbar'
+import IsPrivate from './components/isPrivate'
  
 
 
@@ -38,7 +39,7 @@ function App() {
       <Route path="/performances/:performanceId" element={<PerformanceDetailsPage/>} />
       <Route path="/performances/:performanceId/edit" element={<EditPerformancePage/>} />
       <Route path="/booking" element={<BookingPage/>} />
-      <Route path="/users/:userId" element={<UserPage/>} />
+      <Route path="/users/:userId" element={ <UserPage/> } />
       <Route path="/signup" element={<SignupPage/>} />
       <Route path="/login" element={<LoginPage/>} />
     </Routes>

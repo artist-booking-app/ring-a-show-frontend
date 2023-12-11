@@ -5,10 +5,8 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 
 const API_URL = import.meta.env.VITE_API_URL;
-import { useContext } from 'react';
-import {AuthContext} from '../context/auth.context';
-import Favourites from '../components/Favourites';
-useContext
+
+
 
 function UserPage() {
   const { userId } = useParams();
@@ -20,10 +18,12 @@ function UserPage() {
 
   useEffect(() => {
     axios.get(`${API_URL}/api/users/${userId}`).then((response) => {
+      console.log(response.data)
+      console.log(response.data.bookingReference)
       setUser(response.data);
-      setArtistRef(response.data.bookingReference.artistRef);
-      setPerformanceRef(response.data.bookingReference.performanceRef);
-      setBookingRef(response.data.bookingReference._id);;
+      setArtistRef(response.data.bookingReference?.artistRef);
+      setPerformanceRef(response.data.bookingReference?.performanceRef);
+      setBookingRef(response.data.bookingReference?._id);;
     });
   }, [userId]);
 

@@ -163,7 +163,7 @@ Timeline:
     [x] PUT and DELETE Request
 [x] User page 
     [x] GET request to display user details
-    [ ] Booking details
+    [x] Booking details
     [ ] Favourites component
 [x] Favourites page
 [x] Sign up page
