@@ -22,36 +22,6 @@ import Navbar from './components/Navbar'
 
 
 function App() {
-
-// add favourite Artists
-  const API_URL = import.meta.env.VITE_API_URL
-  const [artists, setArtists] = useState([])
-
-  const getApiData = () => {
-      axios.get(`${API_URL}/api/artists`)
-          .then((response) => {
-              setArtists(response.data)
-          })
-          .catch((error) => {
-              console.log(error)
-          })
-  }
-
-  useEffect(() => {
-      getApiData()
-  }, [])
-
-  const [favouritesArtists, setFavouritesArtists] = useState([])
-
-  const addToFavourites = (artistId) => {
-      const selectedArtist = artists.find((artist) => artist._id === artistId)
-      const alreadyAdded = favouritesArtists.some(artist => artist._id === artistId)
-
-      if (selectedArtist && !alreadyAdded) {
-          setFavouritesArtists([selectedArtist, ...favouritesArtists])
-      }
-  }
-
   
   return (
     <>
@@ -60,7 +30,7 @@ function App() {
     
     <Routes>
       <Route path="/" element={<HomePage />} />
-      <Route path="/artists" element={<ArtistsPage callback={addToFavourites} />} />
+      <Route path="/artists" element={<ArtistsPage />} />
       <Route path="/artists/:artistId" element={<ArtistDetailsPage />} />
       <Route path="/artists/add" element={<CreateArtistPage />} />
       <Route path="/performances" element={<PerformancesPage/>} />
@@ -71,9 +41,8 @@ function App() {
       <Route path="/users/:userId" element={<UserPage/>} />
       <Route path="/signup" element={<SignupPage/>} />
       <Route path="/login" element={<LoginPage/>} />
-      <Route path="/favourites" element={<FavouritesPage favouritesArtists={favouritesArtists}/>} />
     </Routes>
-      
+
     </>
   )
 }

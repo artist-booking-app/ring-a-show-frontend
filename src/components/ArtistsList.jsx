@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Favourites from "./AddToFavourites";
 
 function ArtistsList(props) {
   const API_URL = import.meta.env.VITE_API_URL;
@@ -21,6 +22,10 @@ function ArtistsList(props) {
   useEffect(() => {
     getApiData();
   }, []);
+
+  // const handleAddToFavourites = (addedArtistId) => {
+  //   console.log(`Added artist to favourites: ${addedArtistId}`)
+  // }
 
   return (
     <>
@@ -44,17 +49,20 @@ function ArtistsList(props) {
                     <p>Available in: {artist.cityLocation}</p>
                     {/* <p>{artist.about.biography}</p>
 <a>{artist.about.showreel}</a> */}
+
+                    <Favourites artistId={artist._id} />
                   </li>
                 ))}
               </ul>
 
-              <button
+              {/* <button
                 onClick={() => {
                   props.callback(elm._id);
                 }}
               >
                 Add to Favourites
-              </button>
+              </button> */}
+
             </>
           );
         })
