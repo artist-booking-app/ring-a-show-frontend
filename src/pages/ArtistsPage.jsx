@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 
-function ArtistsPage(props) {
+function ArtistsPage() {
 
 const API_URL = import.meta.env.VITE_API_URL
 
@@ -43,9 +43,6 @@ useEffect(() => {
                                     <p>{elm.about.biography}</p>
                                 </div>
                             </Link>
-                            <button onClick={() => { props.callback(elm._id) }}>
-                                Add to Favourites
-                            </button>
                         </>
                     )
                 })
