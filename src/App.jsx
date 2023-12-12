@@ -1,23 +1,21 @@
-import { useEffect, useState } from 'react'
 import './App.css'
 import { Route, Routes } from 'react-router-dom'
 import HomePage from './pages/HomePage'
-import ArtistsPage from './pages/ArtistsPage'
 import ArtistDetailsPage from './pages/ArtistDetailsPage'
 import PerformanceDetailsPage from './pages/PerformanceDetailsPage'
 import PerformancesPage from './pages/PerformancesPage'
-import BookingPage from './pages/BookingPage'
+import BookingDetailsPage from './pages/BookingDetailsPage'
 import UserPage from './pages/UserPage'
 import SignupPage from './pages/SignupPage'
 import LoginPage from './pages/LoginPage'
 import EditPerformancePage from './pages/EditPerformancePage'
 import CreatePerformancePage from './pages/CreatePerformancePage'
- 
-import FavouritesPage from './pages/FavouritesPage'
-import axios from 'axios'
 import CreateArtistPage from './pages/CreateArtistPage'
 import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 import IsPrivate from './components/isPrivate'
+import IsAnon from './components/isAnon'
+import ArtistsPage from './pages/ArtistsPage'
  
 
 
@@ -38,12 +36,13 @@ function App() {
       <Route path="/performances/create" element={<CreatePerformancePage/>} />
       <Route path="/performances/:performanceId" element={<PerformanceDetailsPage/>} />
       <Route path="/performances/:performanceId/edit" element={<EditPerformancePage/>} />
-      <Route path="/booking" element={<BookingPage/>} />
+      <Route path="/bookings/:bookingId" element={<BookingDetailsPage/>} />
       <Route path="/users/:userId" element={ <UserPage/> } />
       <Route path="/signup" element={<SignupPage/>} />
       <Route path="/login" element={<LoginPage/>} />
     </Routes>
 
+    <Footer />
     </>
   )
 }

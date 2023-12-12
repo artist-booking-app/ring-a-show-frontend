@@ -1,9 +1,10 @@
 import axios from "axios";
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../context/auth.context";
+import { Link } from "react-router-dom";
 useState;
 
-function BookingsList({ bookingRef, performanceRef, artistRef }) {
+function BookingsListUser({ bookingRef, performanceRef, artistRef }) {
 
   const API_URL = import.meta.env.VITE_API_URL;
 
@@ -14,17 +15,14 @@ function BookingsList({ bookingRef, performanceRef, artistRef }) {
   const [bookingRefArr, setBookingRefArr] = useState([])
 
   const { user } = useContext(AuthContext)
-  console.log(user)
+
 
   const getUserRef = () => {
     axios
       .get(`${API_URL}/api/users/${user?._id}`)
       .then((response) => {
-        // console.log("Artist founded" , response.data)
         setUserData(response.data);
-        console.log(response.data)
         setBookingRefArr(response.data.bookingReference)
-        console.log(response.data.bookingReference)
       })
       .catch((error) => {
         console.log(error);
@@ -76,32 +74,26 @@ function BookingsList({ bookingRef, performanceRef, artistRef }) {
       {!bookingRefArr ? (
         <p>No Bookings</p>
       ) : (
-        <ul className="bookings-list-user">
+        <div className="bookings-list-user">
           {bookingRefArr.map((booking) => {
             console.log(booking)
             return (
-              <li>
-                <p>{booking._id}</p>
+              <div>
+                <p>Booking Reference: {booking._id}</p>
                 <p>{booking.artistName}</p>
                 <p>{booking.performanceName}</p>
 
-              </li>
+                <Link to={`/bookings/${booking._id}`}>
+                  <p>More details</p>
+                </Link>
+
+              </div>
             )
           })}
-          {bookingRef && <p>Booking reference: {bookingRef} </p>}
-          {artist && <p>Artist: {artist.artistName}</p>}
-          {performance && <p>Title of the performance: {performance.title}</p>}
-          {booking && <p>Address: {booking.location.address}</p>}
-          {booking && booking.location.indoor ? (
-            <p>Indoors</p>
-          ) : (
-            <p>Outdoors</p>
-          )}
-          {booking && <p>{booking.location.typeOfLocation}</p>}
-        </ul>
+        </div>
       )}
     </>
   );
 }
 
-export default BookingsList;
+export default BookingsListUser;

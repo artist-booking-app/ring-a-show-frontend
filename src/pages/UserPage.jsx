@@ -1,8 +1,9 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../context/auth.context";
-import BookingsList from "../components/BookingsList";
+import BookingsListUser from "../components/BookingsListUser";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import BookingsListArtist from "../components/BookingsListArtist";
 
 const API_URL = import.meta.env.VITE_API_URL;
 
@@ -36,12 +37,18 @@ function UserPage() {
           <p>User Name : {user.userName}</p>
 
           <hr />
-          <p>Booking List</p>
-          <BookingsList
-            artistRef={artistRef && artistRef}
-            performanceRef={performanceRef && performanceRef}
-            bookingRef={bookingRef && bookingRef}
-          />
+          <p>My Bookings</p>
+
+          {user.isArtist ? (
+            <BookingsListArtist />
+          ) : ( <BookingsListUser
+              artistRef={artistRef && artistRef}
+              performanceRef={performanceRef && performanceRef}
+              bookingRef={bookingRef && bookingRef}
+            />
+          )
+          }
+
         </>
       ) : (
         <p>loading?</p>

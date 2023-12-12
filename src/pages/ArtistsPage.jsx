@@ -25,9 +25,6 @@ useEffect(() => {
 
     return(
         <>
-            <Link to="/favourites">
-                Favourites
-            </Link>
 
             {artists === null
                 ? <p>Loading...</p>

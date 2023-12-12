@@ -10,6 +10,7 @@ const API_URL = import.meta.env.VITE_API_URL;
 
 const [artistsData, setArtistsData] = useState([])
 const [selectedPerformances, setSelectedPerformances] = useState([])
+const [chosenCity, setChosenCity] = useState('')
 
 const getApiData = () => {
     axios
@@ -37,11 +38,16 @@ const getApiData = () => {
     }
   };
 
-  // Filter artists based on selected performances
+  // Dropdown state change handler
+  const handleCityChange = (e) => {
+    setChosenCity(e.target.value)
+  }
+
+  // Filter artists based on selected filterss
   const filteredArtists = artistsData.filter((artist) =>
-    selectedPerformances.length === 0 ||
-    artist.typeOfPerformance.some((performance) => selectedPerformances.includes(performance))
-  );
+    (selectedPerformances.length === 0 || artist.typeOfPerformance.some((performance) => selectedPerformances.includes(performance))) &&
+    (chosenCity === "" || artist.cityLocation === chosenCity)
+    );
 
 
     return(
@@ -52,17 +58,22 @@ const getApiData = () => {
                 <h2>Filter by Performance Type</h2>
                 <div>
                     {['Music', 'Comedy', 'Dance', 'Theatre', 'Magic', 'Circus', 'Multidisciplinary', 'Performance Art'].map((performance) => (
-                        <label key={performance}>
-                            <input
-                                type="checkbox"
-                                value={performance}
-                                checked={selectedPerformances.includes(performance)}
-                                onChange={() => handlePerformanceChange(performance)}
-                            />
-                            {performance}
-                        </label>
+                        <button 
+                        key={performance}
+                        style={{background: selectedPerformances.includes(performance) ? 'grey' : 'black'}}
+                        onClick={() => {handlePerformanceChange(performance)}}
+                        >
+                          {performance}
+                        </button>
                     ))}
                 </div>
+
+                <h2>Filter by City</h2>
+                <select value={chosenCity} onChange={handleCityChange}>
+                  <option value="">All Cities</option>
+                  <option value="Berlin">Berlin</option>
+                  <option value="Amsterdam">Amsterdam</option>
+                </select>
 
                 <h2>Artists</h2>
                 <ul>
@@ -78,7 +89,7 @@ const getApiData = () => {
 
         
         {/* <PerformancesList /> */}
-        {/* <ArtistsList /> */}
+        <ArtistsList />
         </>
         
     )

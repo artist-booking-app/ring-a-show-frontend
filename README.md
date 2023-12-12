@@ -184,7 +184,7 @@ Timeline:
 ### Milestone 7
 [x] Implement navigational functionalities
     [x] Navbar (include access to homepage, user page, favourites page, sign up and login)
-    [ ] Footer
+    [x] Footer
 [ ] Styling with CSS
 [ ] Responsive
 
@@ -192,7 +192,7 @@ Timeline:
 [x] Filters for homepage
 [ ] Reviews
 [ ] Suggestions/random pick
-[ ] Calendar in the booking component
+[x] Calendar in the booking component
 [ ] Map component - meeting points/suggestions for performance places
 
 ## Minor fixes
