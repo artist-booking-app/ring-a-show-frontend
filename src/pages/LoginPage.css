@@ -1,0 +1,12 @@
+form {
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+}
+
+form button{
+    margin-top: 20px;
+}
+.signup-link {
+    margin-top: 50px;
+}

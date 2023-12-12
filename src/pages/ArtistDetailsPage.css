@@ -1,0 +1,96 @@
+.ArtistDetailsPage {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .artist-info {
+    max-width: 800px;
+    width: 100%;
+    text-align: left;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .artist-info h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color:#ddd;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  }
+  
+  .artist-info img {
+    width: 80%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  
+  }
+  
+  .artist-info h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    
+  }
+  
+  .artist-info span {
+    font-weight: bold;
+  }
+  
+  .artist-info h4 {
+    margin-bottom: 10px;
+  }
+  
+  .artist-info p {
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  .artist-info a {
+    color: #3498db;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+  }
+  
+  .artist-info a:hover {
+    text-decoration: underline;
+  }
+  
+
+
+  /* Style for the "Show/Hide Performances" button */
+
+  /* Style for the performance details section */
+  .artist-performance-details {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  .artist-performance-details h5 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .artist-performance-details h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .artist-performance-details span {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .artist-performance-details p {
+    margin-bottom: 10px;
+  }
+  
