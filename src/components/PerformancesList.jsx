@@ -47,13 +47,7 @@ function PerformancesList() {
                   <span key={index}>Type: {type}</span>
                 ))}
                 {/* <button>Book Now</button> */}
-                <button onClick={() => setShowForm(!showForm)}>
-                  {!showForm ? (
-                    <p>Book Test</p>
-                  ) : (
-                    <BookingForm artistId={artistId} performanceId={artist.performancesAvailable._id} API_URL={API_URL} artistName={artist.artistName} performanceName={artist.performancesAvailable.title} />
-                  )}{" "}
-                </button>
+               
               </li>
             );
           })}

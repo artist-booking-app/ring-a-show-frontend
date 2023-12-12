@@ -147,8 +147,8 @@ Timeline:
     [x] /signup
 
 ### Milestone 5
-[ ] Homepage
-    [ ] Component for a pop-up banner that asks your preference in the beginning 
+[x] Homepage
+    [x] Component for a pop-up banner that asks your preference in the beginning 
 [x] Artist page
     [x] GET request to display list of artists
     [x] Added "Add to Favourites" button
@@ -164,7 +164,7 @@ Timeline:
 [x] User page 
     [x] GET request to display user details
     [x] Booking details
-    [ ] Favourites component
+    [x] Favourites component
 [x] Favourites page
 [x] Sign up page
     [x] Creating a form to input information
@@ -189,7 +189,7 @@ Timeline:
 [ ] Responsive
 
 ## Bonuses
-[ ] Filters for homepage
+[x] Filters for homepage
 [ ] Reviews
 [ ] Suggestions/random pick
 [ ] Calendar in the booking component
