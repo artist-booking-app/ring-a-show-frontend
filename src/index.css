@@ -1,11 +1,40 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: monospace;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: var(--light-blue);
+
+  
+  /* Option 1 */
+  --yellow: #fcbe0d;
+  --dark-yellow: #fca60d;
+  --light-yellow: #fcd60d;
+  --blue: #0d4bfc;
+  --light-blue: #0dfcbe;
+  --purple: #be0dfc;
+  /* Option 2 */
+  --light-blue: #b5dfdb;
+  --black: #2b3534;
+  --dark-green: #0a4b3f;
+  --grey: #708a88;
+  --light-purple: #b9b5df;
+  --light-brown: #dfcab5;
+  /* Option 3 */
+  --primary: #9C27B0;
+  --primaryDark: #89119D;
+  --secondary: #FFCE00;
+  --secondaryDark: rgb(223,187,2);
+  --white: #FFF;
+  --black: #000;
+    /* Option 4 */
+    --malachite: #31EC56;
+    --razzmatazz: #EF036C; 
+    --heliotrope:  #EE72F8;
+
+ 
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -13,6 +42,19 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+*, *:before, *:after{
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  /* display: flex; */
+  min-width: 100vw;
+  min-height: 100vh;
+  
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
 a {
   font-weight: 500;
   color: #646cff;
@@ -22,18 +64,16 @@ a:hover {
   color: #535bf2;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+p{
+  color: var(--black);
+ font-size: 1.3rem;
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
+
 
 button {
   border-radius: 8px;
@@ -42,7 +82,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: var(--grey);
   cursor: pointer;
   transition: border-color 0.25s;
 }

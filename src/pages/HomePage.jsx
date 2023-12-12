@@ -2,17 +2,16 @@ import PerformancesList from "../components/PerformancesList";
 import ArtistsList from "../components/ArtistsList";
 import { useEffect, useState } from "react";
 import axios from "axios";
-
+import "../pages/HomePage.css"
 
 function HomePage() {
-
-const API_URL = import.meta.env.VITE_API_URL;
+  const API_URL = import.meta.env.VITE_API_URL;
 
 const [artistsData, setArtistsData] = useState([])
 const [selectedPerformances, setSelectedPerformances] = useState([])
 const [chosenCity, setChosenCity] = useState('')
 
-const getApiData = () => {
+  const getApiData = () => {
     axios
       .get(`${API_URL}/api/artists`)
       .then((response) => {
@@ -24,15 +23,19 @@ const getApiData = () => {
   };
 
   useEffect(() => {
-    getApiData()
-  }, [])
+    getApiData();
+  }, []);
 
   // Checkbox state change handler
   const handlePerformanceChange = (performanceType) => {
     const isSelected = selectedPerformances.includes(performanceType);
 
     if (isSelected) {
-      setSelectedPerformances(selectedPerformances.filter((performance) => performance !== performanceType));
+      setSelectedPerformances(
+        selectedPerformances.filter(
+          (performance) => performance !== performanceType
+        )
+      );
     } else {
       setSelectedPerformances([...selectedPerformances, performanceType]);
     }
@@ -49,16 +52,16 @@ const getApiData = () => {
     (chosenCity === "" || artist.cityLocation === chosenCity)
     );
 
-
-    return(
-        <>
-            <h1>HomePage</h1>
+  return (
+    <div className="HomePage">
+      <h1>HomePage</h1>
 
             <div>
                 <h2>Filter by Performance Type</h2>
-                <div>
+                <div className="filter-container">
                     {['Music', 'Comedy', 'Dance', 'Theatre', 'Magic', 'Circus', 'Multidisciplinary', 'Performance Art'].map((performance) => (
                         <button 
+                        className="filter-label"
                         key={performance}
                         style={{background: selectedPerformances.includes(performance) ? 'grey' : 'black'}}
                         onClick={() => {handlePerformanceChange(performance)}}

@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../context/auth.context";
-
+import "../components/Navbar.css"
 function Navbar() {
 
     const { isLoggedIn, user, logOutUser } = useContext(AuthContext);   
@@ -10,7 +10,7 @@ function Navbar() {
 
    
     return (
-      <nav>
+      <nav className="Navbar" > 
         <Link to="/">
           <button>Home</button>
         </Link>
