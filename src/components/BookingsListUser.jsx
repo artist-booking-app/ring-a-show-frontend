@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../context/auth.context";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 useState;
 
 function BookingsListUser({ bookingRef, performanceRef, artistRef }) {
@@ -17,6 +17,7 @@ function BookingsListUser({ bookingRef, performanceRef, artistRef }) {
   const { user } = useContext(AuthContext)
 
 
+
   const getUserRef = () => {
     axios
       .get(`${API_URL}/api/users/${user?._id}`)
@@ -28,46 +29,13 @@ function BookingsListUser({ bookingRef, performanceRef, artistRef }) {
         console.log(error);
       });
   };
-  // const getArtistRef = () => {
-  //   axios
-  //     .get(`${API_URL}/api/artists/${artistRef}`)
-  //     .then((response) => {
-  //       // console.log("Artist founded" , response.data)
-  //       setArtist(response.data);
-  //     })
-  //     .catch((error) => {
-  //       console.log(error);
-  //     });
-  // };
-  // const getPerformanceRef = () => {
-  //   axios
-  //     .get(`${API_URL}/api/performances/${performanceRef}`)
-  //     .then((response) => {
-  //       // console.log("Performance founded" , response.data)
-  //       setPerformance(response.data);
-  //     })
-  //     .catch((error) => {
-  //       console.log(error);
-  //     });
-  // };
-  // const getBooking = () => {
-  //   // console.log("Fetching booking with ID:", bookingRef);
-  //   axios
-  //     .get(`${API_URL}/api/bookings/${bookingRef}`)
-  //     .then((response) => {
-  //       setBooking(response.data);
-  //     })
-  //     .catch((error) => {
-  //       console.error("Error fetching booking:", error);
-  //     });
-  // };
+
 
   useEffect(() => {
     getUserRef()
-    // getArtistRef();
-    // getPerformanceRef();
-    // getBooking();
   }, []);
+
+
 
   return (
     <>
@@ -84,7 +52,7 @@ function BookingsListUser({ bookingRef, performanceRef, artistRef }) {
                 <p>{booking.performanceName}</p>
 
                 <Link to={`/bookings/${booking._id}`}>
-                  <p>More details</p>
+                  <button>More details</button>
                 </Link>
 
               </div>

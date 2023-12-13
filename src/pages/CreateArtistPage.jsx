@@ -7,10 +7,10 @@ function CreateArtistPage () {
 const API_URL = import.meta.env.VITE_API_URL
 
 const [artistName, setArtistName] = useState("")
-const [typeOfPerformance, setTypeOfPerformance] = useState("")
+const [typeOfPerformance, setTypeOfPerformance] = useState([])
 const [genre, setGenre] = useState("")
 const [cityLocation, setCityLocation] = useState("")
-const [performancesAvailable, setPerformancesAvailable] = useState(1)
+
 const [biography, setBiography] = useState("")
 const [showreel, setShowreel] = useState("")
 const [image, setImage] = useState("")
@@ -25,7 +25,7 @@ const handleSubmit = (e) => {
         typeOfPerformance,
         genre,
         cityLocation,
-        performancesAvailable,
+
         about: {
             biography,
             showreel,
@@ -59,16 +59,26 @@ const handleSubmit = (e) => {
                 onChange={(e) => {setArtistName(e.target.value)}}
                 />
             </label>
-            <label>
-                Type of Performance:
-                <input
-                type="text"
-                name="type of performance"
+            <label>Type of the performance</label>
+              <select
+                name="typeOfPerformance"
                 required={true}
                 value={typeOfPerformance}
-                onChange={(e) => {setTypeOfPerformance(e.target.value)}}
-                />
-            </label>
+                onChange={(e) => setTypeOfPerformance(e.target.value)}
+              >
+                <option disabled select value="">
+                  {" "}
+                  Select
+                </option>
+                <option value="Music">Music</option>
+                <option value="Comedy">Comedy</option>
+                <option value="Dance">Dance</option>
+                <option value="Theatre">Theatre</option>
+                <option value="Magic">Magic</option>
+                <option value="Circus">Circus</option>
+                <option value="Multidisciplinary">Multidisciplinary</option>
+                <option value="Performance Art">Performance Art</option>
+              </select>
             <label>
                 Genre:
                 <input
@@ -80,25 +90,33 @@ const handleSubmit = (e) => {
                 />
             </label>
             <label>
-                Location (city):
-                <input
-                type="text"
-                name="location"
-                required={true}
-                value={cityLocation}
-                onChange={(e) => {setCityLocation(e.target.value)}}
-                />
-            </label>
-            <label>
+                  City Location:
+                  <select
+                      type="option"
+                      name="city location"
+                      required={true}
+                      value={cityLocation}
+                      onChange={(e) => setCityLocation(e.target.value)}
+                  >
+                      <option disabled select value="">
+                          {" "}
+                          Select
+                      </option>
+                      <option value="Amsterdam">Amsterdam</option>
+                      <option value="Berlin">Berlin</option>
+
+                  </select>
+              </label>
+            {/* <label>
                 Performances available:
                 <input
-                type="number"
+                type="text"
                 name="performances"
                 required={true}
                 value={performancesAvailable}
                 onChange={(e) => {setPerformancesAvailable(e.target.value)}}
                 />
-            </label>
+            </label> */}
             <label>
                 Biography:
                 <input

@@ -16,6 +16,7 @@ import Footer from './components/Footer'
 import IsPrivate from './components/isPrivate'
 import IsAnon from './components/isAnon'
 import ArtistsPage from './pages/ArtistsPage'
+import EditBookingDetailsPage from './pages/EditBookingDetailsPage'
  
 
 
@@ -31,12 +32,13 @@ function App() {
       <Route path="/" element={<HomePage />} />
       <Route path="/artists" element={<ArtistsPage />} />
       <Route path="/artists/:artistId" element={<ArtistDetailsPage />} />
-      <Route path="/artists/add" element={<CreateArtistPage />} />
+      <Route path="/artists/create" element={<CreateArtistPage />} />
       <Route path="/performances" element={<PerformancesPage/>} />
       <Route path="/performances/create" element={<CreatePerformancePage/>} />
       <Route path="/performances/:performanceId" element={<PerformanceDetailsPage/>} />
       <Route path="/performances/:performanceId/edit" element={<EditPerformancePage/>} />
       <Route path="/bookings/:bookingId" element={<BookingDetailsPage/>} />
+      <Route path="/bookings/:bookingId/edit" element={<EditBookingDetailsPage />} />
       <Route path="/users/:userId" element={ <UserPage/> } />
       <Route path="/signup" element={<SignupPage/>} />
       <Route path="/login" element={<LoginPage/>} />

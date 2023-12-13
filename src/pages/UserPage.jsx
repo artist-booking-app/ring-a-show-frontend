@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../context/auth.context";
 import BookingsListUser from "../components/BookingsListUser";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 import BookingsListArtist from "../components/BookingsListArtist";
 
@@ -37,10 +37,14 @@ function UserPage() {
           <p>User Name : {user.userName}</p>
 
           <hr />
-          <p>My Bookings</p>
+          <h2>My Bookings</h2>
 
           {user.isArtist ? (
-            <BookingsListArtist />
+            <>
+        
+
+              <BookingsListArtist />
+            </>
           ) : ( <BookingsListUser
               artistRef={artistRef && artistRef}
               performanceRef={performanceRef && performanceRef}
@@ -48,6 +52,7 @@ function UserPage() {
             />
           )
           }
+
 
         </>
       ) : (

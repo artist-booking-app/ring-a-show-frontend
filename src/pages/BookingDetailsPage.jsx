@@ -1,12 +1,17 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useContext, useEffect, useState } from "react";
+import { Link, useNavigate, useParams } from "react-router-dom";
+import { AuthContext } from "../context/auth.context";
 
 function BookingDetailsPage() {
 
 const API_URL = import.meta.env.VITE_API_URL
 
 const {bookingId} = useParams()
+
+const {user} = useContext(AuthContext)
+
+const navigate = useNavigate()
 
 const [bookingDetails, setBookingDetails] = useState(null)
 
@@ -24,6 +29,22 @@ const getBookingDetails = () => {
 useEffect(() => {
     getBookingDetails()
 }, [])
+
+ // Cancel specific booking
+ const cancelBooking = () => {
+    axios.delete(`${API_URL}/api/bookings/${bookingId}`)
+    .then(() => {
+
+        axios.put(`${API_URL}/api/users/${user._id}`, {$pull: {bookingReference: bookingId}})
+        .then((response) => {
+            navigate("/")
+        })
+     
+    })
+    .catch((error) => {
+      console.log(error)
+    })
+  }
 
     return (
         <>
@@ -44,8 +65,11 @@ useEffect(() => {
                             <p>Outdoor</p>
                         }
 
+                        <Link to={`/bookings/${bookingId}/edit`}>
                         <button>Edit Booking</button>
-                        <button>Cancel Booking</button>
+                        </Link>
+
+                        <button onClick={cancelBooking}>Cancel Booking</button>
                     </>
                 )
             }

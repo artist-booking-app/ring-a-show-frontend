@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import BookingForm from "../components/BookingForm";
 import PerformancesList from "../components/PerformancesList";
 import "../pages/ArtistDetailsPage.css";
@@ -73,8 +73,11 @@ function ArtistDetailsPage() {
                       Requirements: {artist.performancesAvailable.requirements}
                     </p>
                     <button onClick={() => setShowBooking(!showBooking)}>
-                      {!showBooking ? <p>Book Test</p> : <p>Hide Form</p>}{" "}
+                      {!showBooking ? <p>Book Now</p> : <p>Hide Form</p>}{" "}
                     </button>
+                    <Link to={`/performances/${artist.performancesAvailable._id}`}>
+                        <button>More Details</button>
+                      </Link>
 
                     {showBooking && (
                       <BookingForm

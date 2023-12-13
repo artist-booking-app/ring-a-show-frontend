@@ -45,9 +45,11 @@ function PerformanceDetailsPage() {
              <span key={index}>Type of performance: {type}</span>
           ))}
 
+          <div>
           <Link to={`/performances/${performance._id}/edit`}>
-            <p>Go to edit page</p>
+            <button>Edit Performance</button>
           </Link>
+          </div>
         </div>
       )}
     </div>

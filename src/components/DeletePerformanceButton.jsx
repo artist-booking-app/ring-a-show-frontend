@@ -13,11 +13,11 @@ function DeletePerformance({ performanceId, urlAPI, navigate }) {
 
   if (confirmDelete) {
     axios
-      .delete(`${urlAPI}/performances/${performanceId}`)
+      .delete(`${urlAPI}/api/performances/${performanceId}`)
       .then((response) => {
         console.log("Event successfully removed");
         console.log(response);
-        navigate(`${urlAPI}/performances`);
+        navigate(`/performances`);
       })
       .catch((error) => {
         console.log("Error deleting from the API..." + error);

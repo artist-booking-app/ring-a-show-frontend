@@ -14,15 +14,12 @@ function Navbar() {
         <Link to="/">
           <button>Home</button>
         </Link>
-   
+
         {/*    UPDATE     */}
         {isLoggedIn && (
           <>
-            <Link to="/artists">
-              <button>Artists</button>
-            </Link>   
-
             <button onClick={logOutUser}>Logout</button>
+
           </>
         )}
         
@@ -33,9 +30,18 @@ function Navbar() {
           </>
         ) : (
           <>
+              <Link to={`/artists/create`}>
+              <button>Create Artist</button>
+              </Link>
+
+            <Link to={`/performances/create`}>
+              <button>Create Performance</button>
+              </Link>
             <Link to={`/users/${userId}`} ><button>My Profile</button> </Link>
+
           </>
         ) }
+
       </nav>
     );
   }
