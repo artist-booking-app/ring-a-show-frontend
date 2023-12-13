@@ -1,14 +1,35 @@
 .Navbar {
-    background-color: rgba(var(--grey), 0.2);
+    background-color: var(--white);
+    outline: solid 1px black;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
+    align-items: center;
     gap: 10px;
     position: fixed;
     top: 0;
     left:0;
     width: 100%;
     padding-top: 10px;
-    padding: 2rem;
+    
     margin: 0 auto;
     box-sizing: border-box;
+    z-index: 1;
+  }
+
+  .logo{
+    order: -1;
+    left: 0;
+   
+  }
+  img {
+    max-height: 30px;
+  }
+
+  .navbar-buttons{
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+    margin-right: 2rem;
+    gap: 10px;
+  
   }

@@ -1,71 +1,107 @@
+.HomePage {
+  /* max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center; */
+  margin-top: 70px;
+}
+
+
+.filter-container {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-around;
+
+}
+
+
+.filter-label {
+  gap:10rem;
+  background: rgba(0, 0, 0, 0.2);
+  color: black;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.filter-label:hover {
+  background-color: grey;
+}
+
+.bridge-section {
+  background-color: #f9f9f9;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.bridge-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.bridge-content h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #333; 
+}
+
+.bridge-content p {
+  font-size: 1.2em;
+  line-height: 1.5;
+  color: #555;
+}
+.artists-list {
+  height: 75rem;
+  width: 100%;
+  display: flex;
+ 
+
+  background-image: url(../assets/bg9.jpg) ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+
+  }
+
+select {
+  padding: 10px;
+  margin-bottom: 20px;
+}
 
 ul {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
   list-style-type: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
-
 
 li {
-  background-color: var(--light-blue); 
-  color: var(--grey); 
-  padding: 10px; 
-  margin-bottom: 5px; 
-  width: 40%;
-border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  max-width: 20rem;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 8px;
 }
-
+li h3,
+li p {
+  font-size: 1.7rem;
+  font-family: ;
+}
 
 li:hover {
-  background-color: #555; 
-  color: #ccc;
+  background-image: url(../assets/bg5.jpg);
+}
+li:hover h3,
+li:hover p {
+  color:white;
 }
 
-.filter-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  
-  .filter-label {
-    display: flex;
-    align-items: center;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .filter-label:hover {
-    background-color: #f2f2f2;
-  }
-  
-  .filter-checkbox {
-    display: none;
-  }
-  
-  .custom-checkbox {
-    width: 20px;
-    height: 20px;
-    border: 2px solid #3498db;
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .custom-checkbox:before {
-    content: "";
-    width: 12px;
-    height: 12px;
-    background-color: #3498db;
-    border-radius: 2px;
-    display: none;
-  }
-  
- 

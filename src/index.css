@@ -46,15 +46,7 @@
   box-sizing: inherit;
 }
 
-body {
-  margin: 0;
-  /* display: flex; */
-  min-width: 100vw;
-  min-height: 100vh;
-  
-  font-size: 1.2rem;
-  line-height: 1.5;
-}
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -82,12 +74,12 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: var(--grey);
+  /* background-color: var(--dark-green); */
   cursor: pointer;
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: var(--grey);
 }
 button:focus,
 button:focus-visible {

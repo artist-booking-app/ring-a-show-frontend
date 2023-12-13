@@ -5,22 +5,19 @@ Yellow (#FFCE32), Prussian blue (#1D63FF)
 
 #root {
   max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  /* margin: 0 auto; */
+  /* padding: 2rem; */
   text-align: center;
   
 }
 
 body{
   margin: 0;
-  display: flex;
-  place-items: center;
+  padding: 0;
   min-width: 100vw;
   min-height: 100vh;
   position: relative;
-  color: var(--black);
-  background-color: var(--light-brown);
-  background-image: url("../src/assets/background1.jpg");
+  /* background-image: url("../src/assets/background1.jpg"); */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
