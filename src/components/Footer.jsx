@@ -1,7 +1,10 @@
+import "../components/Footer.css"
+
 function Footer () {
     return(
         <>
-        <footer>
+            <hr />
+        <footer className="footer">
             <div>RingAShow</div>
             <div>Contact Us</div>
             <div>© 2023 RingAShow</div>
