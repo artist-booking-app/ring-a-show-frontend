@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: var(--light-blue);
+  background-color: var(--white);
 
   
   /* Option 1 */
@@ -180,7 +180,7 @@ button:focus-visible {
 }
 
 /* EditBookingDetailsPage */
-.form-container {
+.form-container-edit-booking {
   background-color: var(--white);
   color: black;
   border-radius: 8px;
@@ -192,21 +192,122 @@ button:focus-visible {
   border-width: 1px;
 }
 
-
-form label {
+.form-container-edit-booking label {
   display: block;
   color: black;
   font-size: 16px;
 }
 
-form label input {
+.form-container-edit-booking label input {
   display: block;
   margin: 0 auto;
   width: 400px;
   padding: 10px
 }
 
-form button {
+.form-container-edit-booking button {
+  margin-top: 24px;
+  max-width: 520px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Create Performance Page*/
+.form-container-create-performance {
+  background-color: var(--white);
+  color: black;
+  border-radius: 8px;
+  margin: 40px;
+  padding: 20px 0px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+}
+
+.form-container-create-performance label {
+  display: block;
+  color: black;
+  font-size: 16px;
+}
+
+.form-container-create-performance label input {
+  display: block;
+  margin: 0 auto;
+  width: 400px;
+  padding: 10px
+}
+
+.form-container-create-performance button {
+  margin-top: 24px;
+  max-width: 520px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+/* Create Artist Page */
+
+.form-container-create-artist {
+  background-color: var(--white);
+  color: black;
+  border-radius: 8px;
+  margin: 40px;
+  padding: 20px 0px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+}
+
+.form-container-create-artist label {
+  display: block;
+  color: black;
+  font-size: 16px;
+}
+
+.form-container-create-artist label input {
+  display: block;
+  margin: 0 auto;
+  width: 400px;
+  padding: 10px
+}
+
+.form-container-create-artist button {
+  margin-top: 24px;
+  max-width: 520px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+/* Edit Performance Page */
+.form-container-edit-performance {
+  background-color: var(--white);
+  color: black;
+  border-radius: 8px;
+  margin: 40px;
+  padding: 20px 0px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+}
+
+.form-container-edit-performance label {
+  display: block;
+  color: black;
+  font-size: 16px;
+}
+
+.form-container-edit-performance label input {
+  display: block;
+  margin: 0 auto;
+  width: 400px;
+  padding: 10px
+}
+
+.form-container-edit-performance button {
   margin-top: 24px;
   max-width: 520px;
   width: 100%;

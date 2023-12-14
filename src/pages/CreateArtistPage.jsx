@@ -45,7 +45,7 @@ const handleSubmit = (e) => {
 
     return (
         <>
-        <main className="form-container">
+        <main className="form-container-create-artist">
         <h1>Create Artist</h1>
 
         <form onSubmit={handleSubmit}>
