@@ -1,9 +1,10 @@
 .HomePage {
   /* max-width: 800px;
-  margin: 0 auto;
+
   padding: 20px;
   text-align: center; */
   margin-top: 70px;
+  margin: 0 auto;
 }
 
 
@@ -15,7 +16,7 @@
 }
 
 
-.filter-label {
+/* .filter-label {
   gap:10rem;
   background: rgba(0, 0, 0, 0.2);
   color: black;
@@ -24,12 +25,27 @@
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-}
+} */
 
-.filter-label:hover {
+/* .filter-label:hover {
   background-color: grey;
+} */
+.filter-container button {
+  background: rgba(0, 0, 0, 0.2);
+  color: black;
+  border: none;
+  margin:0.2rem;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+
 }
 
+.filter-container button:hover {
+  background-color: grey;
+  color: var(--grey);
+}
 .bridge-section {
   background-color: #f9f9f9;
   padding: 40px 20px;
@@ -44,7 +60,7 @@
 .bridge-content h2 {
   font-size: 2em;
   margin-bottom: 20px;
-  color: #333; 
+  color: #333;
 }
 
 .bridge-content p {
@@ -56,7 +72,7 @@
   height: 75rem;
   width: 100%;
   display: flex;
- 
+
 
   background-image: url(../assets/bg9.jpg) ;
   background-repeat: no-repeat;
@@ -94,7 +110,7 @@ li {
 li h3,
 li p {
   font-size: 1.7rem;
-  font-family: ;
+ 
 }
 
 li:hover {

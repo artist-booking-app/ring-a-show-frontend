@@ -1,8 +1,16 @@
-.footer{    
-margin-top: 3rem;
-display: flex;
-justify-content: space-evenly;
-
-
-    
-}
+.footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--grey);
+    padding: 1rem; 
+  }
+  
+  .footer p {
+    font-weight: 700;
+    font-size: 1rem;
+    color: #fff; 
+    margin: 0; 
+  }
+  
+ 

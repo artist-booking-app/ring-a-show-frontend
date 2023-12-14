@@ -62,7 +62,7 @@ function HomePage() {
   return (
     <div className="HomePage">
       <Banner />
-      {/* <h1>Delivering Art to your home</h1> */}
+
 
       <section className="bridge-section">
         <div className="bridge-content">
@@ -92,8 +92,8 @@ function HomePage() {
               key={performance}
               style={{
                 background: selectedPerformances.includes(performance)
-                  ? "rgba(126, 237, 156)"
-                  : "rgba(255, 255, 255, 0.87)",
+                  ? "rgba(126, 237, 156)" //green
+                  : "rgba(255, 255, 255, 0.87)", //white
               }}
               onClick={() => {
                 handlePerformanceChange(performance);
