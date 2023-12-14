@@ -42,8 +42,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-*, *:before, *:after{
-  box-sizing: inherit;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 
@@ -79,7 +81,8 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: var(--grey);
+  color: var(--white);
+  background-color: var(--grey);
 }
 button:focus,
 button:focus-visible {

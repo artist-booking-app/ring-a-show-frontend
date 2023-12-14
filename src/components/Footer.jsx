@@ -5,9 +5,9 @@ function Footer () {
         <>
             <hr />
         <footer className="footer">
-            <div>RingAShow</div>
-            <div>Contact Us</div>
-            <div>© 2023 RingAShow</div>
+            <p>RingAShow</p>
+            <p>Contact Us</p>
+            <p>© 2023 RingAShow</p>
         </footer>
         </>
     )
