@@ -6,6 +6,8 @@ import "../pages/HomePage.css";
 import Banner from "../components/Banner";
 import { Link } from "react-router-dom";
 
+
+
 function HomePage() {
   const API_URL = import.meta.env.VITE_API_URL;
 
@@ -121,7 +123,9 @@ function HomePage() {
             {filteredArtists.map((artist) => (
               <Link to={`/artists/${artist._id}`}>
               <li key={artist._id}>
-                <h3>{artist.artistName}</h3>
+                <Link to={`/artists/${artist._id}`}>
+                  <h3>{artist.artistName}</h3>
+                </Link>
                 <p style={{fontStyle: 'italic'}} >{artist.typeOfPerformance}</p>
               </li>
               </Link>
