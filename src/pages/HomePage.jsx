@@ -142,6 +142,7 @@ function HomePage() {
         <p>No Artists Available</p>
       )}
     </div>
+    </div>
   );
 }
 
