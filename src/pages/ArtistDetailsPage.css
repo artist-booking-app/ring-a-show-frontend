@@ -1,5 +1,4 @@
 .ArtistDetailsPage {
-    /* font-family: Arial, sans-serif; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -12,8 +11,6 @@
     background-position: center center;
     color: black;
   }
-
-  
   
   .artist-info {
     margin-top: 3rem;
@@ -123,3 +120,12 @@
   }
   
 
+  @media (max-width: 768px) {
+   .ArtistDetailsPage{
+    margin-top: 0;
+   }
+   .container{
+    display: flex;
+    flex-direction: column;
+   }
+  }
