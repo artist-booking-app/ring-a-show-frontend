@@ -5,17 +5,13 @@
   text-align: center; */
   margin-top: 70px;
   margin: 0 auto;
-  background-color: #333;
 }
-
 
 .filter-container {
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: space-around;
-
 }
-
 
 /* .filter-label {
   gap:10rem;
@@ -35,17 +31,21 @@
   background: rgba(0, 0, 0, 0.2);
   color: black;
   border: none;
-  margin:0.2rem;
+  margin: 0.2rem;
   padding: 10px;
   border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease;  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-
+  transition: background-color 0.3s ease;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .filter-container button:hover {
   background-color: grey;
   color: var(--grey);
+}
+select {
+  padding: 10px;
+  margin-bottom: 20px;
 }
 .bridge-section {
   background-color: #f9f9f9;
@@ -69,26 +69,22 @@
   line-height: 1.5;
   color: #555;
 }
+
 .artists-list {
-  height: 75rem;
+  /* height: 75rem; */
   width: 100%;
   display: flex;
+  padding: 2rem;
 
+  flex-wrap: wrap;
 
-  background-image: url(../assets/bg9.jpg) ;
+  background-image: url(../assets/bg9.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-
-
-  }
-
-select {
-  padding: 10px;
-  margin-bottom: 20px;
 }
 
-ul {
+.artists-list ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -97,21 +93,21 @@ ul {
   gap: 1rem;
 }
 
-li {
-  display: flex;
+.artists-list li {
+  /* display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-around; */
   max-width: 20rem;
   width: 100%;
   text-align: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
+  height: 100%;
   border-radius: 8px;
 }
 li h3,
 li p {
   font-size: 1.7rem;
- 
 }
 
 li:hover {
@@ -119,6 +115,5 @@ li:hover {
 }
 li:hover h3,
 li:hover p {
-  color:white;
+  color: white;
 }
-

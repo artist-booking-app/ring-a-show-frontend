@@ -114,8 +114,8 @@ function HomePage() {
           </select>
         </div>
       </div>
-      <div className="container"></div>
 
+      <div className="artists-container">
       <h2>Artists nearby</h2>
       {filteredArtists ? (
         <div className="artists-list">
@@ -136,6 +136,9 @@ function HomePage() {
       ) : (
         <p>No Artists Available</p>
       )}
+      </div>
+
+      
 
       {/* <PerformancesList /> */}
       {/* <ArtistsList /> */}
