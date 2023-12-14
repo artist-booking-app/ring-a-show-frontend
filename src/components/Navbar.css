@@ -33,3 +33,36 @@
     gap: 10px;
   
   }
+
+  .hamburger-logo {
+    display: none;
+  }
+
+    @media (max-width: 768px) {
+      .Navbar {
+        display: flex;
+        justify-content: space-between;
+  
+      }
+
+      .navbar-buttons {
+        display: none;
+      }
+
+      .hamburger-logo {
+        height: 32px;
+        display: inline-block;
+        padding-right: 16px;
+      }
+
+      .hamburger-nav {
+        border-style: solid;
+        border-color: black;
+        border-width: 1px;      
+      }
+
+      .hamburger-nav ul > li > a {
+        color: black
+      }
+
+    }

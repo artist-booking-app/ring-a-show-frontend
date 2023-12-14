@@ -290,6 +290,7 @@ button:focus-visible {
   margin: 10px auto;
 }
 
+/* Performance Details Page */
 .performance-details-container h2 {
   color: black;
 }
@@ -297,6 +298,14 @@ button:focus-visible {
 .performance-details-container button {
   margin-bottom: 30px;
 }
+
+@media (max-width: 768px) {
+  .performance-details-container {
+    margin: 0 20px;
+  }
+}
+
+
 
 
 
