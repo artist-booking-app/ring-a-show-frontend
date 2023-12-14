@@ -1,6 +1,16 @@
-form {
-    display: grid;
+.signup-page h1 {
+    color: black;
 }
-lable {
-    color: whitesmoke;
+
+.signup-page label {
+    color: black;
+}
+
+.signup-page input {
+    background-color: white;
+    color: black;
+}
+
+.signup-page button {
+    margin-bottom: 30px;
 }

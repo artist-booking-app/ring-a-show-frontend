@@ -38,7 +38,9 @@ const handleSignupSubmit = (e) => {
 }
 
     return(
-        <>
+        <div className="signup-page">
+        <h1>Sign Up</h1>
+
         <form onSubmit={handleSignupSubmit}>
         <label>Email:</label>
         <input
@@ -84,7 +86,7 @@ const handleSignupSubmit = (e) => {
                 </label>
         <button type="submit">Sign Up</button>
       </form>
-        </>
+        </div>
     )
 }
 

@@ -40,8 +40,8 @@ function LoginPage() {
     };
     
     return (
-      <div className="LoginPage">
-        {/* <h1>Login</h1> */}
+      <div className="login-page">
+        <h1>Login</h1>
    
         <form onSubmit={handleLoginSubmit}>
           <label>Email:</label>
@@ -67,9 +67,13 @@ function LoginPage() {
 
         <div className="signup-link">
         <p>Don't have an account yet?</p>
-        <button>
-        <Link to={"/signup"}> Sign Up</Link>
-        </button>
+
+          <Link to={"/signup"}>
+            <button className="signup-button">
+              Sign Up
+            </button>
+          </Link>
+          
         </div>
         
       </div>
