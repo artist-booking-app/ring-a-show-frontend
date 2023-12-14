@@ -1,8 +1,4 @@
 .HomePage {
-  /* max-width: 800px;
-
-  padding: 20px;
-  text-align: center; */
   margin-top: 70px;
   margin: 0 auto;
 }
@@ -15,6 +11,7 @@
 
 .filter-container button {
   background: rgba(0, 0, 0, 0.2);
+
   color: black;
   border: none;
   margin: 0.2rem;
@@ -25,6 +22,21 @@
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
+.filter-container button {
+  background: rgba(0, 0, 0, 0.2);
+  color: black;
+  border: none;
+  margin:0.2rem;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+
+}
+.performance-filter h2 {
+  color: black;
+}
+
 .filter-container button:hover {
   color: var(--grey);
 }
@@ -32,6 +44,16 @@ select {
   padding: 10px;
   margin-bottom: 20px;
 }
+
+.city-filter h2 {
+  color: black;
+}
+
+.city-filter select {
+  background-color: white;
+  color: black;
+}
+
 .bridge-section {
   background-color: #f9f9f9;
   padding: 40px 20px;

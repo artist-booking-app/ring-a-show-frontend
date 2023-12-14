@@ -147,15 +147,15 @@ function EditPerformancePage() {
               />
             </label>
 
-                <div>
-                  <button className="update-details-button">Update details</button>
+               
+                  <button>Update details</button>
 
                   <DeletePerformance
                     performanceId={performanceId}
                     urlAPI={urlAPI}
                     navigate={navigate}
                   />
-                </div>
+               
 
           </form>
         </>

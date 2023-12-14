@@ -35,15 +35,14 @@ function PerformanceDetailsPage() {
       {loading ? (
         <p>Loading...</p>
       ) : (
-        <div>
+        <div className="performance-details-container">
           <h2>{performance.title} </h2>
           <p>{performance.description}</p>
           <p>Minimum requirementes: {performance.requirements} </p>
           <span>Performance fee: {performance.fee}€</span>
           <br />
-          {performance.typeOfPerformance.map((type, index) => (
-             <span key={index}>Type of performance: {type}</span>
-          ))}
+
+          <p>Type of performance: {performance.typeOfPerformance}</p>
 
           <div>
           <Link to={`/performances/${performance._id}/edit`}>
