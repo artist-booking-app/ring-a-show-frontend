@@ -123,7 +123,7 @@ function HomePage() {
             {filteredArtists.map((artist) => (
               <Link to={`/artists/${artist._id}`}>
               <li key={artist._id}
-              style={{
+               style={{
                 backgroundImage: `url(${artist.imagePath})`,
                 backgroundSize: 'cover', 
                 backgroundPosition: 'center', 
@@ -143,10 +143,7 @@ function HomePage() {
       )}
       </div>
 
-      
 
-      {/* <PerformancesList /> */}
-      {/* <ArtistsList /> */}
     </div>
   );
 }
