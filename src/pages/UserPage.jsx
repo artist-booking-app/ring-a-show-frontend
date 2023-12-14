@@ -30,19 +30,20 @@ function UserPage() {
 
   return (
     <div>
-      <h1>UserPage</h1>
       {user ? (
         <>
-
-          <p>User Name : {user.userName}</p>
+          <h1 className="profile-header">My Profile</h1>
+          <div className="profile">
+            <p>{user.userName}</p>
+            <p>Email:</p>
+            <p>{user.email}</p>
+          </div>
 
           <hr />
-          <h2>My Bookings</h2>
+          <h2 className="booking-header">My Bookings</h2>
 
           {user.isArtist ? (
             <>
-        
-
               <BookingsListArtist />
             </>
           ) : ( <BookingsListUser
@@ -52,8 +53,6 @@ function UserPage() {
             />
           )
           }
-
-
         </>
       ) : (
         <p>loading?</p>

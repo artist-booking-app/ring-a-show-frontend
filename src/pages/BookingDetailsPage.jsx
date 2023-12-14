@@ -51,7 +51,7 @@ useEffect(() => {
             {bookingDetails === null ?
                 <p>Loading...</p>
                 : (
-                    <>
+                    <div className="booking-details-container">
                         <h3>Booking reference: {bookingDetails._id}</h3>
                         <h3>Artist name: {bookingDetails.artistName}</h3>
                         <h3>Performance: {bookingDetails.performanceName}</h3>
@@ -66,11 +66,11 @@ useEffect(() => {
                         }
 
                         <Link to={`/bookings/${bookingId}/edit`}>
-                        <button>Edit Booking</button>
+                        <button className="edit-booking-button">Edit Booking</button>
                         </Link>
 
-                        <button onClick={cancelBooking}>Cancel Booking</button>
-                    </>
+                        <button className="cancel-booking-button" onClick={cancelBooking}>Cancel Booking</button>
+                    </div>
                 )
             }
 

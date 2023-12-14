@@ -45,6 +45,7 @@ const handleSubmit = (e) => {
 
     return (
         <>
+        <main className="form-container">
         <h1>Create Artist</h1>
 
         <form onSubmit={handleSubmit}>
@@ -59,7 +60,9 @@ const handleSubmit = (e) => {
                 onChange={(e) => {setArtistName(e.target.value)}}
                 />
             </label>
-            <label>Type of the performance</label>
+
+            <label>
+                Type of Performance
               <select
                 name="typeOfPerformance"
                 required={true}
@@ -79,6 +82,8 @@ const handleSubmit = (e) => {
                 <option value="Multidisciplinary">Multidisciplinary</option>
                 <option value="Performance Art">Performance Art</option>
               </select>
+              </label>
+
             <label>
                 Genre:
                 <input
@@ -89,6 +94,7 @@ const handleSubmit = (e) => {
                 onChange={(e) => {setGenre(e.target.value)}}
                 />
             </label>
+
             <label>
                   City Location:
                   <select
@@ -107,16 +113,7 @@ const handleSubmit = (e) => {
 
                   </select>
               </label>
-            {/* <label>
-                Performances available:
-                <input
-                type="text"
-                name="performances"
-                required={true}
-                value={performancesAvailable}
-                onChange={(e) => {setPerformancesAvailable(e.target.value)}}
-                />
-            </label> */}
+  
             <label>
                 Biography:
                 <input
@@ -127,6 +124,7 @@ const handleSubmit = (e) => {
                 onChange={(e) => {setBiography(e.target.value)}}
                 />
             </label>
+
             <label>
                 Showreel:
                 <input
@@ -137,6 +135,7 @@ const handleSubmit = (e) => {
                 onChange={(e) => {setShowreel(e.target.value)}}
                 />
             </label>
+            
             <label>
                 Image:
                 <input
@@ -151,6 +150,8 @@ const handleSubmit = (e) => {
             <button>Submit</button>
 
         </form>
+
+        </main>
 
         </>
 

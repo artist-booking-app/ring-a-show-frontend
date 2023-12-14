@@ -64,75 +64,79 @@ function EditPerformancePage() {
   }, []);
 
   return (
-    <div className="EditFormPerformance">
+    <>
+    <main className="form-container">
       {loading ? (
         <p>Loading...</p>
       ) : (
         <>
-          <h3>Edit Performance Details</h3>
+          <h1>Edit Performance Details</h1>
 
-          <form onSubmit={handleFormSubmit} className="edit-form-performance">
-            <div className="form-item">
-              <label htmlFor="title">Title of the performance</label>
-              <input
-                type="text"
-                name="title"
-                placeholder={performance.title}
-                required={true}
-                value={title}
-                onChange={(e) => setTitle(e.target.value)}
-              />
-            </div>
+          <form onSubmit={handleFormSubmit}>
 
-            <div className="form-item">
-              <label htmlFor="description">
-                Description of the performance
-              </label>
-              <input
-                type="text"
-                name="description"
-                placeholder={performance.description}
-                required={true}
-                value={description}
-                onChange={(e) => setDescription(e.target.value)}
-              />
-            </div>
+                <label>
+                  Title of the performance:
+                  <input
+                    type="text"
+                    name="title"
+                    placeholder={performance.title}
+                    required={true}
+                    value={title}
+                    onChange={(e) => setTitle(e.target.value)}
+                  />
+                </label>
 
-            <div className="form-item">
-              <label htmlFor="typeOfPerformance">Type of the performance</label>
-              <select
-                name="typeOfPerformance"
-                required={true}
-                value={typeOfPerformance}
-                onChange={(e) => setTypeOfPerformance(e.target.value)}
-              >
-                <option disabled select value="">
-                  {" "}
-                  Select an option
-                </option>
-                <option value="Music">Music</option>
-                <option value="Theatre">Theatre</option>
-                <option value="Dance">Dance</option>
-                <option value="Improv">Improve</option>
-              </select>
-            </div>
+            
+                <label>
+                  Description of the performance:
+                  <input
+                    type="text"
+                    name="description"
+                    placeholder={performance.description}
+                    required={true}
+                    value={description}
+                    onChange={(e) => setDescription(e.target.value)}
+                  />
+                </label>
+           
 
-            <div className="form-item">
-              <label htmlFor="fee">Fee of the performance</label>
-              <input
-                type="number"
-                name="fee"
-                placeholder={performance.fee}
-                required={true}
-                value={fee}
-                onChange={(e) => setFee(e.target.value)}
-              />
-            </div>
+                <label>
+                  Type of performance:
+                  <select
+                    name="typeOfPerformance"
+                    required={true}
+                    value={typeOfPerformance}
+                    onChange={(e) => setTypeOfPerformance(e.target.value)}
+                  >
+                    <option disabled select value="">
+                      {" "}
+                      Select an option
+                    </option>
+                    <option value="Music">Music</option>
+                    <option value="Comedy">Comedy</option>
+                    <option value="Dance">Dance</option>
+                    <option value="Theatre">Theatre</option>
+                    <option value="Magic">Magic</option>
+                    <option value="Circus">Circus</option>
+                    <option value="Multidisciplinary">Multidisciplinary</option>
+                    <option value="Performance Art">Performance Art</option>
+                  </select>
+                </label>
 
-            <div className="form-item">
-              <label htmlFor="requirements">
-                Requirements of the performance
-              </label>
+                <label>
+                  Fee of the performance:
+                  <input
+                    type="number"
+                    name="fee"
+                    placeholder={performance.fee}
+                    required={true}
+                    value={fee}
+                    onChange={(e) => setFee(e.target.value)}
+                  />
+                </label>
+         
+              <label>
+                Requirements of the performance:
               <input
                 type="text"
                 name="requirements"
@@ -141,17 +145,23 @@ function EditPerformancePage() {
                 value={requirements}
                 onChange={(e) => setRequirements(e.target.value)}
               />
-            </div>
-            <button type="submit">Update details</button>
-            <DeletePerformance
-                 performanceId={performanceId}
-                 urlAPI={urlAPI}
-                 navigate={navigate} 
-            />
+            </label>
+
+                <div>
+                  <button className="update-details-button">Update details</button>
+
+                  <DeletePerformance
+                    performanceId={performanceId}
+                    urlAPI={urlAPI}
+                    navigate={navigate}
+                  />
+                </div>
+
           </form>
         </>
       )}
-    </div>
+      </main>
+    </>
   );
 }
 

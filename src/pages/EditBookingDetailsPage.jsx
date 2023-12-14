@@ -66,6 +66,7 @@ const handleFormSubmit = (e) => {
 
     return(
         <>
+        <main className="form-container">
         <h1>Booking Details</h1>
 
         <form onSubmit={handleFormSubmit}>
@@ -115,7 +116,7 @@ const handleFormSubmit = (e) => {
             </label>
 
             <label>
-                  Type of Location:
+                  Type of Location: 
                   <select
                       type="option"
                       name="type of location"
@@ -133,7 +134,7 @@ const handleFormSubmit = (e) => {
                   </select>
               </label>
 
-              <label>Indoor?</label>
+              <label>Indoor?
               <label>
                   <input
                       type="radio"
@@ -144,6 +145,7 @@ const handleFormSubmit = (e) => {
                   />
                   Yes
               </label>
+              
               <label>
                   <input
                       type="radio"
@@ -154,10 +156,12 @@ const handleFormSubmit = (e) => {
                   />
                   No
               </label>
+              </label>
 
             <button>Confirm changes</button>
 
         </form>
+        </main>
         </>
     )
 }

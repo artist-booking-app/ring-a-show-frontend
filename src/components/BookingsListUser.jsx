@@ -46,14 +46,18 @@ function BookingsListUser({ bookingRef, performanceRef, artistRef }) {
           {bookingRefArr.map((booking) => {
             console.log(booking)
             return (
-              <div>
-                <p>Booking Reference: {booking._id}</p>
-                <p>{booking.artistName}</p>
-                <p>{booking.performanceName}</p>
+              <div className="booking-container">
+                <div>
+                  <p>Artist name: {booking.artistName}</p>
+                  <p>Performance: {booking.performanceName}</p>
+                </div>
 
-                <Link to={`/bookings/${booking._id}`}>
-                  <button>More details</button>
-                </Link>
+                <div>
+                  <p>Booking Reference: {booking._id}</p>
+                  <Link to={`/bookings/${booking._id}`}>
+                    <button>More details</button>
+                  </Link>
+                </div>
 
               </div>
             )

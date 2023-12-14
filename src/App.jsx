@@ -15,7 +15,6 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import IsPrivate from './components/isPrivate'
 import IsAnon from './components/isAnon'
-import ArtistsPage from './pages/ArtistsPage'
 import EditBookingDetailsPage from './pages/EditBookingDetailsPage'
  
 
@@ -30,7 +29,6 @@ function App() {
     
     <Routes>
       <Route path="/" element={<HomePage />} />
-      <Route path="/artists" element={<ArtistsPage />} />
       <Route path="/artists/:artistId" element={<ArtistDetailsPage />} />
       <Route path="/artists/create" element={<CreateArtistPage />} />
       <Route path="/performances" element={<PerformancesPage/>} />

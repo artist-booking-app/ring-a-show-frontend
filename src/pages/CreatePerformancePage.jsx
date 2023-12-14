@@ -41,16 +41,18 @@ function CreatePerformancePage() {
   };
   
   return (
-    <div className="CreatePerformance">
+   <>
+   <main className="form-container">
       {loading ? (
         <p>Loading...</p>
       ) : (
         <>
-          <h3>Create Performance Details</h3>
+          <h1>Create Performance</h1>
 
-          <form onSubmit={handleFormSubmit} className="create-form-performance">
-            <div className="form-item">
-              <label htmlFor="title">Title of the performance</label>
+          <form onSubmit={handleFormSubmit}>
+            
+              <label>
+                Title of the performance
               <input
                 type="text"
                 name="title"
@@ -59,12 +61,11 @@ function CreatePerformancePage() {
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
               />
-            </div>
+            </label>
 
-            <div className="form-item">
-              <label htmlFor="description">
+            
+              <label>
                 Description of the performance
-              </label>
               <input
                 type="text"
                 name="description"
@@ -73,10 +74,10 @@ function CreatePerformancePage() {
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
               />
-            </div>
+             </label>
 
-            <div className="form-item">
-              <label htmlFor="typeOfPerformance">Type of the performance</label>
+              <label>
+                Type of the performance
               <select
                 name="typeOfPerformance"
                 required={true}
@@ -88,14 +89,19 @@ function CreatePerformancePage() {
                   Select
                 </option>
                 <option value="Music">Music</option>
-                <option value="Theatre">Theatre</option>
+                <option value="Comedy">Comedy</option>
                 <option value="Dance">Dance</option>
-                <option value="Improv">Improve</option>
+                <option value="Theatre">Theatre</option>
+                <option value="Magic">Magic</option>
+                <option value="Circus">Circus</option>
+                <option value="Multidisciplinary">Multidisciplinary</option>
+                <option value="Performance Art">Performance Art</option>
               </select>
-            </div>
+              </label>
 
-            <div className="form-item">
-              <label htmlFor="fee">Fee of the performance</label>
+         
+              <label>
+                Fee of the performance
               <input
                 type="number"
                 name="fee"
@@ -104,12 +110,10 @@ function CreatePerformancePage() {
                 value={fee}
                 onChange={(e) => setFee(e.target.value)}
               />
-            </div>
+           </label>
 
-            <div className="form-item">
-              <label htmlFor="requirements">
+              <label>
                 Requirements of the performance
-              </label>
               <input
                 type="text"
                 name="requirements"
@@ -118,12 +122,15 @@ function CreatePerformancePage() {
                 value={requirements}
                 onChange={(e) => setRequirements(e.target.value)}
               />
-            </div>
+              </label>
+
             <button type="submit">Create Performance</button>
+
           </form>
         </>
       )}
-    </div>
+      </main>
+    </>
   );
 }
 

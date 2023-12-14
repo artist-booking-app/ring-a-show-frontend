@@ -34,15 +34,15 @@ function BookingsListArtist () {
             {bookingRefArr.map((booking) => {
               console.log(booking)
               return (
-                <div>
+                <div className="booking-container-user">
                   <p>Booking Reference: {booking._id}</p>
                   <p>{booking.artistName}</p>
                   <p>{booking.performanceName}</p>
-  
+
                   <Link to={`/bookings/${booking._id}`}>
                     <button>More details</button>
                   </Link>
-  
+
                 </div>
               )
             })}

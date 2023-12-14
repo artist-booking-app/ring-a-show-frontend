@@ -101,3 +101,119 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+/* UserPage and BookingsListUser */
+.profile-header {
+  text-shadow: 2px 3px 5px rgba(0,0,0,0.5);
+}
+
+.profile {
+  text-align: left;
+  margin-left: 40px;
+}
+
+.profile p:nth-child(1){
+  font-size: 32px;
+}
+
+
+
+.booking-header {
+  text-align: left;
+  margin-left: 40px;
+  text-shadow: 2px 3px 5px rgba(0,0,0,0.5);
+}
+
+.bookings-list-user {
+  text-align: left;
+  margin-left: 40px;
+  margin-right: 40px;
+
+}
+
+.booking-container {
+  text-align: left;
+  padding: 20px;
+  margin-bottom: 10px;
+  background-color: var(--white);
+  border-radius: 8px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+}
+
+.booking-container div:nth-child(2) {
+  text-align: right;
+}
+
+.booking-container div:nth-child(2) p {
+  font-style: italic;
+}
+
+/* BookingDetailsPage */
+.booking-details-container {
+  background-color: var(--white);
+  border-radius: 8px;
+  margin: 40px 20px;
+  padding: 20px 0px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  color: black;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+}
+
+.booking-details-container h3:nth-child(1) {
+  font-style: italic;
+}
+
+.edit-booking-button {
+  margin-right: 10px;
+}
+
+.cancel-booking-button {
+  margin-left: 10px;
+}
+
+/* EditBookingDetailsPage */
+.form-container {
+  background-color: var(--white);
+  color: black;
+  border-radius: 8px;
+  margin: 40px;
+  padding: 20px 0px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+}
+
+
+form label {
+  display: block;
+  color: black;
+  font-size: 16px;
+}
+
+form label input {
+  display: block;
+  margin: 0 auto;
+  width: 400px;
+  padding: 10px
+}
+
+form button {
+  margin-top: 24px;
+  max-width: 520px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.update-details-button {
+  margin-bottom: 8px;
+  margin-right: 8px;
+}

@@ -22,9 +22,6 @@ function Navbar() {
       {/*    UPDATE     */}
       {isLoggedIn && (
         <>
-          <Link to="/artists">
-            <button>Artists</button>
-          </Link>
 
           <button onClick={logOutUser}>Logout</button>
         </>
