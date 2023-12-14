@@ -147,7 +147,7 @@ const handleSubmit = (e) => {
                 />
             </label>
 
-            <button>Submit</button>
+            <button>Create Artist</button>
 
         </form>
 

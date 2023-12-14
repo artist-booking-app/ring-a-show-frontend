@@ -104,7 +104,7 @@ button:focus-visible {
 
 /* UserPage and BookingsListUser */
 .profile-header {
-  text-shadow: 2px 3px 5px rgba(0,0,0,0.5);
+  color: black;
 }
 
 .profile {
@@ -116,12 +116,10 @@ button:focus-visible {
   font-size: 32px;
 }
 
-
-
 .booking-header {
   text-align: left;
   margin-left: 40px;
-  text-shadow: 2px 3px 5px rgba(0,0,0,0.5);
+  color: black;
 }
 
 .bookings-list-user {
@@ -311,10 +309,17 @@ button:focus-visible {
   margin-top: 24px;
   max-width: 520px;
   width: 100%;
-  margin: 0 auto;
+  margin: 10px auto;
 }
 
-.update-details-button {
-  margin-bottom: 8px;
-  margin-right: 8px;
+.performance-details-container h2 {
+  color: black;
 }
+
+.performance-details-container button {
+  margin-bottom: 30px;
+}
+
+
+
+

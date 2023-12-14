@@ -1,8 +1,4 @@
 .HomePage {
-  /* max-width: 800px;
-
-  padding: 20px;
-  text-align: center; */
   margin-top: 70px;
   margin: 0 auto;
 }
@@ -14,21 +10,10 @@
   justify-content: space-around;
 }
 
-
-/* .filter-label {
-  gap:10rem;
-  background: rgba(0, 0, 0, 0.2);
+.performance-filter h2 {
   color: black;
-  border: none;
-  padding: 10px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-} */
+}
 
-/* .filter-label:hover {
-  background-color: grey;
-} */
 .filter-container button {
   background: rgba(0, 0, 0, 0.2);
   color: black;
@@ -45,6 +30,16 @@
   background-color: grey;
   color: var(--grey);
 }
+
+.city-filter h2 {
+  color: black;
+}
+
+.city-filter select {
+  background-color: white;
+  color: black;
+}
+
 .bridge-section {
   background-color: #f9f9f9;
   padding: 40px 20px;

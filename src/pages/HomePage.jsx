@@ -136,9 +136,6 @@ function HomePage() {
       ) : (
         <p>No Artists Available</p>
       )}
-
-      {/* <PerformancesList /> */}
-      {/* <ArtistsList /> */}
     </div>
   );
 }
