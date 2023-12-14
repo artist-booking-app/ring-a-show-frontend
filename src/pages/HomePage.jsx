@@ -114,15 +114,20 @@ function HomePage() {
           </select>
         </div>
       </div>
-      <div className="container"></div>
 
+      <div className="artists-container">
       <h2>Artists nearby</h2>
       {filteredArtists ? (
         <div className="artists-list">
           <ul>
             {filteredArtists.map((artist) => (
               <Link to={`/artists/${artist._id}`}>
-              <li key={artist._id}>
+              <li key={artist._id}
+              style={{
+                backgroundImage: `url(${artist.imagePath})`,
+                backgroundSize: 'cover', 
+                backgroundPosition: 'center', 
+              }} >
                 <Link to={`/artists/${artist._id}`}>
                   <h3>{artist.artistName}</h3>
                 </Link>
