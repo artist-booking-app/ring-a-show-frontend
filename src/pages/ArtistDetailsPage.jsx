@@ -38,12 +38,12 @@ function ArtistDetailsPage() {
         <>
           <div className="ArtistDetailsPage">
             <div className="artist-info">
-              <h1>{artist.artistName}</h1>
               <img src={artist.imagePath} alt="artist picture" />
+              <h1>{artist.artistName}</h1>
+              <p>{artist.about.biography}</p>
               <h2>{artist.typeOfPerformance}</h2>
               <span>Genre: {artist.genre}</span>
               <h4>Available in: {artist.cityLocation}</h4>
-              <p>{artist.about.biography}</p>
               <a>{artist.about.showreel}</a>
             </div>
 
@@ -58,8 +58,11 @@ function ArtistDetailsPage() {
                   )}{" "}
                 </button>
                 {showForm && (
-                  <div className="artist-performance-details">
-                    <h5>Performances available: </h5>
+                  <>
+                  <hr />
+                  <h3>Performances available </h3>
+                  <div className="container">
+                       <div className="artist-performance-details">
                     <h2>{artist.performancesAvailable.title}</h2>
                     <span>
                       #{artist.performancesAvailable.typeOfPerformance}
@@ -72,23 +75,32 @@ function ArtistDetailsPage() {
                     <p>
                       Requirements: {artist.performancesAvailable.requirements}
                     </p>
-                    <button onClick={() => setShowBooking(!showBooking)}>
-                      {!showBooking ? <p>Book Now</p> : <p>Hide Form</p>}{" "}
-                    </button>
                     <Link to={`/performances/${artist.performancesAvailable._id}`}>
                         <button>More Details</button>
                       </Link>
+                    </div>
+                    <button onClick={() => setShowBooking(!showBooking)}>
+                      {!showBooking ? <p>Book Now</p> : <p>Hide Form</p>}{" "}
+                    </button>
+                    
 
                     {showBooking && (
-                      <BookingForm
-                        artistId={artistId}
-                        performanceId={artist.performancesAvailable._id}
-                        API_URL={API_URL}
-                        artistName={artist.artistName}
-                        performanceName={artist.performancesAvailable.title}
-                      />
+                      <div className="booking-form">
+
+                        <BookingForm
+                          artistId={artistId}
+                          performanceId={artist.performancesAvailable._id}
+                          API_URL={API_URL}
+                          artistName={artist.artistName}
+                          performanceName={artist.performancesAvailable.title}
+                        />
+                      </div>
                     )}
+                  
                   </div>
+                  
+                  </>
+                 
                 )}
               </>
             )}
