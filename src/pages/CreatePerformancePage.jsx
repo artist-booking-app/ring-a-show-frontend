@@ -42,7 +42,7 @@ function CreatePerformancePage() {
   
   return (
    <>
-   <main className="form-container">
+   <main className="form-container-create-performance">
       {loading ? (
         <p>Loading...</p>
       ) : (

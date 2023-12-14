@@ -104,31 +104,22 @@
     grid-column: 2/3;
     background-color: rgba(255, 255, 255, 0.4);
     margin-top: 20px;
-    padding: 20px;
+    padding: 10px;
     /* border: 1px solid black; */
     border-radius: 8px;
     color: black;
     position: relative;
- 
+    box-sizing: border-box;
+  }
+
+  .booking-form input {
+    background-color: white;
+    color: black;
+  }
+
+  .booking-form select {
+    background-color: white;
+    color: black;
   }
   
-  /* .artist-performance-details h5 {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-  }
-  
-  .artist-performance-details h2 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-  }
-  
-  .artist-performance-details span {
-    font-weight: bold;
-    display: block;
-    margin-bottom: 10px;
-  }
-  
-  .artist-performance-details p {
-    margin-bottom: 10px;
-  }
-   */
+

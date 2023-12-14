@@ -1,12 +1,23 @@
-form {
-   display: flex;
-   flex-direction: column;
-   gap: 100px;
+.login-page h1 {
+    color: black;
 }
 
-form button{
-    margin-top: 20px;
+.login-page label {
+    color: black;
 }
+
+.login-page input {
+    background-color: var(--white);
+    color: black
+}
+
 .signup-link {
-    margin-top: 50px;
+    margin-top: 30px;
 }
+
+.signup-button {
+    margin-bottom: 30px;
+}
+
+
+

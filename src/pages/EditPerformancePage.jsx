@@ -65,7 +65,7 @@ function EditPerformancePage() {
 
   return (
     <>
-    <main className="form-container">
+    <main className="form-container-edit-performance">
       {loading ? (
         <p>Loading...</p>
       ) : (

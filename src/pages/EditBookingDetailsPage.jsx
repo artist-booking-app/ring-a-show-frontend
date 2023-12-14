@@ -66,7 +66,7 @@ const handleFormSubmit = (e) => {
 
     return(
         <>
-        <main className="form-container">
+        <main className="form-container-edit-booking">
         <h1>Booking Details</h1>
 
         <form onSubmit={handleFormSubmit}>
