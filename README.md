@@ -1,4 +1,49 @@
-Project 3 - MERN Stack App
+# RingAShow
+
+## About
+
+An app that allows you to book artists for small gigs at home or at a specified location. The app is easy to use and works similar to a food delivery app. Just browse through our list of artists and their performances and click "Book Now" to book that artist.
+
+Features include:
+- Filters to specify what type of performance and the city you are located in
+- Profile page to store all your relevant bookings
+- Bookings can be edited or cancelled if needed
+- The ability to create and edit artists and performances (only available if you have an artist profile)
+
+## Steps to run the app locally (frontend)
+
+1. Fork this repo and clone it
+2. Navigate to this directory and run the following codes:
+    ```bash 
+    npm install 
+    code -r .
+    ```
+3. Once opened, install the following dependencies:
+    ```bash
+  
+    npm install react-router-dom 
+    ```
+4. Once all the previous steps have been completed, type this code to enable the app to run locally on your browser:
+    ```bash
+    npm run dev
+    ```
+Please note that this app has a .env file which houses the url for the API. If not present, follow the steps bellow:
+
+1. Create a .env file in the root/directory folder
+2. Create a variable called VITE_API_URL and store this link:
+
+    "https://ring-a-show-backend.adaptable.app"
+
+3. When completed, it shoud look like this:
+    ```bash
+    VITE_API_URL = "https://ring-a-show-backend.adaptable.app"
+    ```
+
+## Demo 
+
+https://ring-a-show.netlify.app/
+
+
 
 Brainstorm:
 - Possible ideas:
@@ -24,7 +69,7 @@ MVP:
   - Set up a mutual agreement (both parties agree to the performance)
 
 Models:
-- User model --> CR 
+- User model --> CRU 
   - name:
   - last name:
   - email:
@@ -36,7 +81,7 @@ Models:
     - performance ready?: boolean
   - reviews from artists who performed for this user previously (protected; only artists can see this) [array of strings]
 
-- Artist model: - CR
+- Artist model: - CRU
   - artist name: String
   - type of performance: [enum, array]
   - genre (if applicable):
@@ -55,6 +100,16 @@ Models:
   - artist model:
   - reviews:
   - fee: [enum, range]
+
+- Booking model: - CRUD
+  - Artist reference
+  - Performance reference
+  - User reference
+  - date
+  - location:
+    - address
+    - type of location: private or commercial
+    - indoor or outdoor
 
 App pages:
 - Home page:
@@ -185,14 +240,13 @@ Timeline:
 [x] Implement navigational functionalities
     [x] Navbar (include access to homepage, user page, favourites page, sign up and login)
     [x] Footer
-[ ] Styling with CSS
-[ ] Responsive
+[x] Styling with CSS
+[x] Responsive
 
 ## Bonuses
 [x] Filters for homepage
 [ ] Reviews
 [ ] Suggestions/random pick
-[x] Calendar in the booking component
 [ ] Map component - meeting points/suggestions for performance places
 
 ## Minor fixes
