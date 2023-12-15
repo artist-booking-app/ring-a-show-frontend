@@ -43,7 +43,7 @@ Please note that this app has a .env file which houses the url for the API. If n
 
 https://ring-a-show.netlify.app/
 
-
+## Project Planning
 
 Brainstorm:
 - Possible ideas:
