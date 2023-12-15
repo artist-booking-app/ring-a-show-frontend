@@ -6,9 +6,11 @@ An app that allows you to book artists for small gigs at home or at a specified 
 
 Features include:
 - Filters to specify what type of performance and the city you are located in
-- Profile page to store all your relevant bookings
-- Bookings can be edited or cancelled if needed
-- The ability to create and edit artists and performances (only available if you have an artist profile)
+- A booking feature to book your favorite artist and performance
+- The ability to create an account to store all your bookings
+- With this account, you have the following benefits:
+  - Browse through your bookings and make any changes where necessary
+  - Create and edit new artists and performances
 
 ## Steps to run the app locally (frontend)
 
