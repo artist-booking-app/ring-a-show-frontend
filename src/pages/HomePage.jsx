@@ -1,5 +1,3 @@
-import PerformancesList from "../components/PerformancesList";
-import ArtistsList from "../components/ArtistsList";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "../pages/HomePage.css";

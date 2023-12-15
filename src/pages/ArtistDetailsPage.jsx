@@ -2,7 +2,6 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import BookingForm from "../components/BookingForm";
-import PerformancesList from "../components/PerformancesList";
 import "../pages/ArtistDetailsPage.css";
 
 function ArtistDetailsPage() {

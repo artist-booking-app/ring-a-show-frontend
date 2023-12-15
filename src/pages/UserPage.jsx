@@ -37,6 +37,19 @@ function UserPage() {
             <p>{user.userName}</p>
             <p>Email:</p>
             <p>{user.email}</p>
+
+            {user.isArtist ? (
+              <>
+                <p>Artist:</p>
+                <p>Yes</p>
+              </>
+            ) : (
+              <>
+                <p>Artist:</p>
+                <p>No</p>
+              </>
+            )
+            }
           </div>
 
           <hr />

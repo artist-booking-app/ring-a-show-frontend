@@ -178,7 +178,14 @@ button:focus-visible {
   display: block;
   margin: 0 auto;
   width: 400px;
-  padding: 10px
+  padding: 10px;
+  background-color: white;
+  color: black;
+}
+
+.form-container-edit-booking select {
+  background-color: white;
+  color: black;
 }
 
 .form-container-edit-booking button {
@@ -211,7 +218,14 @@ button:focus-visible {
   display: block;
   margin: 0 auto;
   width: 400px;
-  padding: 10px
+  padding: 10px;
+  background-color: white;
+  color: black;  
+}
+
+.form-container-create-performance select {
+  background-color: white;
+  color: black;
 }
 
 .form-container-create-performance button {
@@ -246,7 +260,14 @@ button:focus-visible {
   display: block;
   margin: 0 auto;
   width: 400px;
-  padding: 10px
+  padding: 10px;
+  background-color: white;
+  color: black;  
+}
+
+.form-container-create-artist select {
+  background-color: white;
+  color: black;
 }
 
 .form-container-create-artist button {
@@ -280,7 +301,14 @@ button:focus-visible {
   display: block;
   margin: 0 auto;
   width: 400px;
-  padding: 10px
+  padding: 10px;
+  background-color: white;
+  color: black; 
+}
+
+.form-container-edit-performance select {
+  background-color: white;
+  color: black;
 }
 
 .form-container-edit-performance button {

@@ -62,7 +62,7 @@ select {
 .bridge-content h2 {
   font-size: 2em;
   margin-bottom: 20px;
-
+  color: black;
 }
 
 .artists-list {
