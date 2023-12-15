@@ -35,7 +35,7 @@ const handleSubmit = (e) => {
 
         axios.post(API_URL + "/api/artists", requestBody)
             .then((response) => {
-                navigate("/artists")
+                navigate("/")
             })
             .catch((error) => {
                 console.log(error)

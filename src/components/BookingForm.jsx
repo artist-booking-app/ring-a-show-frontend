@@ -2,6 +2,7 @@ import axios from "axios";
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../context/auth.context";
 import "../components/BookingForm.css";
+import { useNavigate } from "react-router-dom";
 
 function BookingForm({
   performanceId,
@@ -14,12 +15,20 @@ function BookingForm({
   const [typeOfLocation, setTypeOfLocation] = useState("");
   const [indoor, setIndoor] = useState(true);
   const [date, setDate] = useState("");
-  const { user } = useContext(AuthContext);
+  const { user, isLoggedIn } = useContext(AuthContext);
+
+  const navigate = useNavigate()
 
   const [bookingRefArr, setBookingRefArr] = useState([]);
 
   const bookNowHandler = (e) => {
+
     e.preventDefault();
+
+    if(!isLoggedIn) {
+      navigate("/login")
+      return
+    }
 
     const requestBody = {
       artistRef: artistId,
@@ -40,7 +49,6 @@ function BookingForm({
       .then((response) => {
         console.log(response + "Booking was successful");
         console.log(response.data._id);
-
         const bookingId = response.data._id;
 
         axios
@@ -49,6 +57,7 @@ function BookingForm({
           })
           .then((response) => {
             console.log(response.data, "user details");
+       
           });
       })
 
